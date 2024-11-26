@@ -1,0 +1,113 @@
+:root {
+    --primary: #1DA1F2;
+    --secondary: #657786;
+    --background: #FFFFFF;
+    --success: #17BF63;
+    --warning: #FFAD1F;
+    --error: #E0245E;
+    --info: #0069B2;
+    --text-primary: #14171A;
+    --text-secondary: #657786;
+    --text-white: #FFFFFF;
+    --card-background: #F5F8FA;
+    --border: #E1E8ED;
+    --hover: #E1E8ED;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-size: 10px;
+    font-family: sans-serif;
+    background-color: var(--background);
+}
+
+.recipe-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.recipe-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 12px;
+}
+
+.recipe-card {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-background);
+    padding: 10px;
+    text-align: center;
+}
+
+.recipe-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.recipe-name {
+    font-size: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 8px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.button--ingredients {
+    background-color: var(--info);
+    color: var(--text-white);
+    border: none;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.button--status {
+    background-color: transparent;
+    color: var(--success);
+    border: 1px solid var(--success);
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* MOBILE SCREEN */
+@media (min-width: 430px) {
+    .recipe-list {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* TABLET SCREEN */
+@media (min-width: 768px) {
+    .recipe-list {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* DESKTOP SCREEN */
+@media (min-width: 1024px) {
+    .recipe-list {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
